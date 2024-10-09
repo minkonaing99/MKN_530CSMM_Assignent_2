@@ -1,0 +1,69 @@
+    .btn-size {
+      width: 150px;
+    }
+
+    @media (max-width: 767.98px) {
+      .hide-on-small {
+        display: none;
+      }
+
+      .justify-content-end-sm {
+        justify-content: end !important;
+      }
+
+      .full-width-sm {
+        width: 100%;
+      }
+
+      .text-sm {
+        margin: 0;
+        padding: 2px;
+      }
+
+      .profile-info {
+        flex-direction: row !important;
+        align-items: center !important;
+        font-size: 14px !important;
+        font-weight: normal !important;
+        margin: 5px 0 !important;
+      }
+
+      .profile-info span {
+        width: 30% !important;
+        text-align: left !important;
+        padding: 0 !important;
+      }
+
+      .profile-info h4 {
+        margin: 0 !important;
+        padding: 5px 0 !important;
+        font-size: 19px !important;
+        font-weight: normal !important;
+      }
+
+      span.col-5 {
+        width: 100px;
+      }
+    }
+
+    .d-flex-center {
+      display: flex;
+      align-items: center;
+    }
+
+    .d-flex-between {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .d-flex-between h4 {
+      margin-right: 1rem;
+      flex: 1;
+    }
+
+    .d-flex-between input,
+    .d-flex-between select {
+      flex: 2;
+    }

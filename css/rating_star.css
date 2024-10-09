@@ -1,0 +1,55 @@
+.padding {
+    height: 30px;
+    background-color: transparent;
+}
+
+.box {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.star-widget input {
+    display: none;
+}
+
+.star-widget label {
+    font-size: 35px;
+    color: #e5dad0;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+input:not(:checked)~label:hover,
+input:not(:checked)~label:hover~label {
+    color: #00afb9;
+}
+
+input:checked~label {
+    color: #00afb9;
+}
+
+.ratinglabel {
+    color: black;
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .box {
+        padding: 15px 0px;
+    }
+
+    .ratinglabel {
+        font-size: 25px;
+    }
+
+    .star-widget label {
+        font-size: 35px;
+    }
+}
