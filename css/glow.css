@@ -1,0 +1,112 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.glow-primary {
+    background: hsl(0, 0%, 100%);
+    padding: .8rem 1.5rem;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .01);
+}
+
+.glow-primary::after {
+    position: absolute;
+    inset: -.5rem;
+    content: "";
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    z-index: -1;
+    border-radius: inherit;
+    filter: blur(6px); 
+    background: conic-gradient(
+        from var(--gradient-angle),
+        rgba(0, 199,182, 0.8),
+        rgba(0, 180, 216, 0.8),
+        rgba(144, 224, 239, 0.8),
+        rgba(0, 180, 216, 0.8),
+        rgba(0, 199,182, 0.8)
+    );
+    animation: rotation 3s linear infinite;
+}
+
+.glow-warning {
+    background: hsl(0, 0%, 100%);
+    padding: .8rem 1.5rem;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .01);
+}
+
+.glow-warning::after {
+    position: absolute;
+    inset: -.5rem;
+    content: "";
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    z-index: -1;
+    border-radius: inherit;
+    filter: blur(6px); 
+    background: conic-gradient(
+        from var(--gradient-angle),
+        rgba(255, 255, 0, 0.8),   /* Bright Yellow */
+        rgba(255, 223, 0, 0.8),   /* Golden Yellow */
+        rgba(255, 239, 153, 0.8), /* Light Yellow */
+        rgba(255, 223, 0, 0.8),   /* Golden Yellow */
+        rgba(255, 255, 0, 0.8) 
+        
+        
+    );
+    animation: rotation 3s linear infinite;
+}
+
+.glow-danger {
+    background: hsl(0, 0%, 100%);
+    padding: .8rem 1.5rem;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .01);
+}
+
+.glow-danger::after {
+    position: absolute;
+    inset: -.5rem;
+    content: "";
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    z-index: -1;
+    border-radius: inherit;
+    filter: blur(6px); 
+    background: conic-gradient(
+        from var(--gradient-angle),
+        rgba(255, 0, 0, 0.8),   /* Bright Red */
+        rgba(220, 20, 60, 0.8), /* Crimson */
+        rgba(255, 99, 71, 0.8), /* Tomato */
+        rgba(220, 20, 60, 0.8), /* Crimson */
+        rgba(255, 0, 0, 0.8)
+
+        
+
+
+
+        
+    );
+    animation: rotation 3s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        --gradient-angle: 0deg;
+    }
+    100% {
+        --gradient-angle: 360deg;
+    }
+}
